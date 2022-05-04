@@ -1,8 +1,12 @@
 import styles from './styles.module.css'
 import Navbar from '../components/Navbar'
+import Snackbar from '../components/SnackBar'
+
+
 export default function Refund() {
 	return (
 		<div id='home' className={styles['home']}>
+			<Snackbar message=' 🎉  Flat ₹2499 off for first 50 people!' />
 			<Navbar />
 			<div id='memberships' className='margin'>
 				<section className={styles['pricing']}>
