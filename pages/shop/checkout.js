@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import { SiteContext, ContextProviderComponent } from "../context/mainContext"
-import DENOMINATION from "../utils/currencyProvider"
+import { SiteContext, ContextProviderComponent } from "../../context/mainContext"
+import DENOMINATION from "../../utils/currencyProvider"
 import { FaLongArrowAltLeft } from "react-icons/fa"
 import Link from "next/link"
-import Image from "../components/Image"
+import Image from "../../components/shop/Image"
 import { v4 as uuid } from "uuid"
 
 import {
@@ -225,7 +225,6 @@ const Checkout = ({ context }) => {
                       disabled={!stripe}
                       onClick={handleSubmit}
                       className="hidden md:block bg-primary hover:bg-black text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline"
-                      type="button"
                     >
                       Confirm order
                     </button>
@@ -256,7 +255,6 @@ const Checkout = ({ context }) => {
                   disabled={!stripe}
                   onClick={handleSubmit}
                   className="md:hidden bg-primary hover:bg-black text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline"
-                  type="button"
                 >
                   Confirm order
                 </button>

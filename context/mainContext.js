@@ -61,7 +61,8 @@ class ContextProviderComponent extends React.Component {
       cart, numberOfItemsInCart: cart.length, total: calculateTotal(cart)
     }))
     toast("Successfully added item to cart!", {
-      position: toast.POSITION.TOP_LEFT
+      position: toast.POSITION.TOP_LEFT,
+      type: "success"
     })
     this.forceUpdate()
   }
@@ -94,13 +95,13 @@ class ContextProviderComponent extends React.Component {
     return (
       <SiteContext.Provider value={{
         ...state,
-         addToCart: this.addToCart,
-         clearCart: this.clearCart,
-         removeFromCart: this.removeFromCart,
-         setItemQuantity: this.setItemQuantity
+        addToCart: this.addToCart,
+        clearCart: this.clearCart,
+        removeFromCart: this.removeFromCart,
+        setItemQuantity: this.setItemQuantity
       }}>
-       {this.props.children}
-     </SiteContext.Provider>
+        {this.props.children}
+      </SiteContext.Provider>
     )
   }
 }

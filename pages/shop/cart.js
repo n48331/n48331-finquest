@@ -8,6 +8,9 @@ import QuantityPicker from '../../components/shop/QuantityPicker'
 import Image from '../../components/shop/Image'
 import Head from 'next/head'
 import CartLink from '../../components/shop/CartLink'
+import styles from "./cart.module.css"
+import './cart.module.css'
+
 
 const Cart = ({ context }) => {
   const [renderClientSideComponent, setRenderClientSideComponent] = useState(false)
@@ -35,122 +38,126 @@ const Cart = ({ context }) => {
   return (
     <>
       <CartLink />
-      <div className="flex flex-col items-center pb-10">
-        <Head>
-          <title>finquest ECommerce - Cart</title>
-          <meta name="description" content={`finquest ECommerce - Shopping cart`} />
-          <meta property="og:title" content="finquest ECommerce - Cart" key="title" />
-        </Head>
-        <div className="
-          flex flex-col w-full
-          c_large:w-c_large
-        ">
-          <div className="pt-10 pb-8">
-            <h1 className="text-5xl font-light">Your Cart</h1>
+      <Head>
+        <title>finquest ECommerce - Cart</title>
+        <meta name="description" content={`finquest ECommerce - Shopping cart`} />
+        <meta property="og:title" content="finquest ECommerce - Cart" key="title" />
+      </Head>
+      <div className="bg-white py-6 sm:py-8 lg:py-12">
+        <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
+          <div className="mb-6 sm:mb-10 lg:mb-16">
+            <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
+              Your Cart
+            </h2>
           </div>
-
           {
             cartEmpty ? (
               <h3>No items in cart.</h3>
             ) : (
-              <div className="flex flex-col">
-                <div>
-                  {
-                    cart.map((item) => {
-                      return (
-                        <div className="border-b py-10" key={item.id}>
-                          <div className="flex items-center hidden md:flex">
+              <div className="flex flex-col sm:border-t sm:border-b sm:divide-y mb-5 sm:mb-8">
+                {
+                  cart.map((item) => {
+                    return (
+                      <div className="py-5 sm:py-8" key={item.id}>
+                        <div className="flex flex-wrap gap-4 lg:gap-6 sm:py-2.5">
+
+                          <div className="sm:-my-2.5" >
                             <Link href={`/product/${slugify(item.name)}`}>
-                              <a aria-label={item.name}>
-                                <Image className="w-32 m-0" src={item.image} alt={item.name} />
-                              </a>
-                            </Link>
-                            <Link href={`/product/${slugify(item.name)}`}>
-                              <a aria-label={item.name}>
-                                <p className="
-                                m-0 pl-10 text-gray-600 w-60
-                                ">
-                                  {item.name}
-                                </p>
-                              </a>
-                            </Link>
-                            <div className="ml-4">
+                              <a aria-label={item.name}
+                                href="#"
+                                className="group w-24 sm:w-40 h-40 sm:h-56 block bg-gray-100 rounded-lg overflow-hidden relative">
+                                <Image className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200 " src={item.image} alt={item.name} />
+                              </a></Link>
+                          </div>
+                          <div className="flex flex-col justify-between flex-1">
+                            <div>
+                              <Link href={`/product/${slugify(item.name)}`}>
+                                <a aria-label={item.name}
+                                  href="#"
+                                  className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">
+                                  Top
+                                </a></Link>
+                              <span className="block text-gray-500">Size: {item.size}</span>
+                              <span className="block text-gray-500">Color: {item.color}</span>
+                            </div>
+                            <div>
+                              <span className="block text-gray-800 md:text-lg font-bold mb-1">
+                                {DENOMINATION + item.price}
+                              </span>
+                              <span className="flex items-center text-gray-500 text-sm gap-1">
+                                <span>
+                                  <svg
+                                    className="w-5 h-5 text-green-500"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M5 13l4 4L19 7"
+                                    />
+                                  </svg>
+                                </span>
+                                <span> In stock </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div className="w-full sm:w-auto flex justify-between border-t sm:border-none pt-4 sm:pt-0">
+                            <div className="flex flex-col items-start gap-2">
                               <QuantityPicker
                                 numberOfitems={item.quantity}
                                 increment={() => increment(item)}
                                 decrement={() => decrement(item)}
                               />
+                              <button onClick={() => removeFromCart(item)} className="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 text-sm font-semibold select-none transition duration-100">
+                                Delete
+                              </button>
                             </div>
-                            <div className="flex flex-1 justify-end">
-                              <p className="m-0 pl-10 text-gray-900 tracking-wider">
-                                {DENOMINATION + item.price}
-                              </p>
-                            </div>
-                            <div role="button" onClick={() => removeFromCart(item)} className="
-                            m-0 ml-10 text-gray-900 text-s cursor-pointer
-                            ">
-                              <FaTimes />
-                            </div>
-                          </div>
-
-                          <div className="flex items-center flex md:hidden">
-                            <Link href={`/product/${slugify(item.name)}`}>
-                              <a>
-                                <Image className="w-32 m-0" src={item.image} alt={item.name} />
-                              </a>
-                            </Link>
-                            <div>
-                              <Link href={`/product/${slugify(item.name)}`}>
-                                <a aria-label={item.name}>
-                                  <p className="
-                                  m-0 pl-6 text-gray-600 text-base
-                                  ">
-                                    {item.name}
-                                  </p>
-                                </a>
-                              </Link>
-                              <div className="ml-6 mt-4 mb-2">
-                                <QuantityPicker
-                                  hideQuantityLabel
-                                  numberOfitems={item.quantity}
-                                  increment={() => increment(item)}
-                                  decrement={() => decrement(item)}
-                                />
-                              </div>
-                              <div className="flex flex-1">
-                                <p className="text-lg m-0 pl-6 pt-4 text-gray-900 tracking-wider">
-                                  {DENOMINATION + item.price}
-                                </p>
-                              </div>
-                            </div>
-                            <div role="button" onClick={() => removeFromCart(item)} className="
-                            m-0 ml-10 text-gray-900 text-s cursor-pointer mr-2
-                            ">
-                              <FaTimes />
+                            <div className="pt-3 sm:pt-2 ml-4 md:ml-8 lg:ml-16">
+                              <span className="block text-gray-800 md:text-lg font-bold">
+                                {DENOMINATION + item.price * item.quantity}
+                              </span>
                             </div>
                           </div>
                         </div>
-                      )
-                    })
-                  }
+                      </div>
+
+                    )
+                  })}
+              </div>
+            )}
+          <div className="flex flex-col items-end gap-4">
+            <div className="w-full sm:max-w-xs bg-gray-100 rounded-lg p-4">
+              <div className="space-y-1">
+                <div className="flex justify-between text-gray-500 gap-4">
+                  <span>Subtotal</span>
+                  <span>{DENOMINATION + total}</span>
+                </div>
+                <div className="flex justify-between text-gray-500 gap-4">
+                  <span>Shipping</span>
+                  <span>{DENOMINATION + 0}</span>
                 </div>
               </div>
-            )
-          }
-          <div className="flex flex-1 justify-end py-8">
-            <p className="text-sm pr-10">Total</p>
-            <p className="font-semibold tracking-wide">{DENOMINATION + total}</p>
-          </div>
-          {!cartEmpty && (
-            <Link href="/checkout" className="flex flex-1 justify-end">
-              <a aria-label="Check out">
-                <div className="cursor-pointer flex items-center">
-                  <p className="text-gray-600 text-sm mr-2">Proceed to check out</p>
-                  <FaLongArrowAltRight className="text-gray-600" />
+              <div className="border-t pt-4 mt-4">
+                <div className="flex justify-between items-start text-gray-800 gap-4">
+                  <span className="text-lg font-bold">Total</span>
+                  <span className="flex flex-col items-end">
+                    <span className="text-lg font-bold">{DENOMINATION + total} INR</span>
+                    <span className="text-gray-500 text-sm">including VAT</span>
+                  </span>
                 </div>
-              </a>
-            </Link>
-          )}
+              </div>
+            </div>
+            {!cartEmpty && (
+              <Link href="/shop/checkout">
+                <a className=" inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">
+                  Check out
+                </a></Link>
+            )}
+          </div>
         </div>
       </div>
     </>

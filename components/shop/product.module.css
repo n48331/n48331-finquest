@@ -1,3 +1,5 @@
+
+
 .aboutR {
     display: flex;
     align-items: center;
@@ -7,6 +9,7 @@
     justify-content: space-between;
 
 }
+
 
 .aboutL {
     display: flex;
@@ -131,6 +134,7 @@
         width: 2rem;
         height: 2rem;
     }
+    
 }
 
 @media (max-width: 767px) {
@@ -183,4 +187,8 @@
     }
 }
 
-@media (max-width: 639px) {}
+@media (max-width: 639px) {
+
+
+    
+}

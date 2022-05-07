@@ -65,23 +65,23 @@ export default function Navbar() {
 
 				<ul className={styles['links-list']}>
 					<motion.li variants={item}>
-						<Link href='/about'>
+						<Link href='/'>
 							<a>Home</a>
 						</Link>
 					</motion.li>
 					<motion.li variants={item}>
-						<Link href='/#benefits'>
-							<a>Shop</a>
+						<Link href='/shop'>
+							<a>Goodies</a>
 						</Link>
 					</motion.li>
 					<motion.li variants={item}>
-						<Link href='/#memberships'>
-							<a>Memberships</a>
+						<Link href='#Journal'>
+							<a>Journals</a>
 						</Link>
 					</motion.li>
 					<motion.li variants={item}>
-						<Link href='/#faqs'>
-							<a>FAQs</a>
+						<Link href='#tshirt'>
+							<a>T-Shirts</a>
 						</Link>
 					</motion.li>
 				</ul>
@@ -109,42 +109,42 @@ function Menu({ onClose }) {
 			</div>
 			<ul className={styles['menu-links-list']} onClick={onClose}>
 				<motion.li variants={menuItem}>
-					<Link href='/about'>
+					<Link href='/'>
 						<a>
 							<FaBuilding className={styles['menu-item-icon']} style={{ color: '#1963ed' }} />
-							<span>About us</span>
+							<span>Home</span>
 						</a>
 					</Link>
 				</motion.li>
 				<motion.li variants={menuItem}>
-					<Link href='/#benefits'>
+					<Link href='/shop'>
 						<a>
 							<FaStar className={styles['menu-item-icon']} style={{ color: '#f1b915' }} />
-							<span>Benefits</span>
+							<span>Goodies</span>
 						</a>
 					</Link>
 				</motion.li>
 				<motion.li variants={menuItem}>
-					<Link href='/#memberships'>
+					<Link href='#Journal'>
 						<a>
 							<FaAward className={styles['menu-item-icon']} style={{ color: '#0bab2e' }} />
-							<span>Memberships</span>
+							<span>Journals</span>
 						</a>
 					</Link>
 				</motion.li>
 				<motion.li variants={menuItem}>
-					<Link href='/#faqs'>
+					<Link href='#tshirt'>
 						<a>
 							<FaQuestion className={styles['menu-item-icon']} style={{ color: '#e71628' }} />
-							<span>FAQs</span>
+							<span>T-Shirts</span>
 						</a>
 					</Link>
 				</motion.li>
 				<motion.li variants={menuItem}>
-					<Link href='/#community'>
+					<Link href='/#contact'>
 						<a>
 							<BsPeopleFill className={styles['menu-item-icon']} style={{ color: '#8117f3' }} />
-							<span>Community</span>
+							<span>Contact</span>
 						</a>
 					</Link>
 				</motion.li>

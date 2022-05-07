@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 
 
-export default function ProductRight({ imageSrc, title, link, desc }) {
+export default function ProductRight({ imageSrc, title, link, desc, price }) {
     return (
         <>
             <section className={styles['aboutR']}>
@@ -19,12 +19,20 @@ export default function ProductRight({ imageSrc, title, link, desc }) {
                                 whileTap={{ scale: 0.95 }}
                                 className={styles['action-button']}
                             >
-                                Add to Cart
+                                Buy Now
                             </motion.button>
                         </a></Link>
-                    <h3>{title}</h3>
                     <p>
                         {desc} </p>
+                    <div className="flex items-end gap-2">
+                        <span className="text-gray-800 text-xl md:text-4xl font-bold">
+                            ₹{price}
+                        </span>
+                        <span className="text-red-500 text-xl line-through mb-0.5">₹{price * 1.25}</span>
+                    </div><br />
+
+
+                    <h3>{title}</h3>
                 </div>
                 <div>
                     <img className={styles['image']} src={imageSrc} alt={title} width='110%' height='auto' />
