@@ -7,7 +7,6 @@ export default function Refund() {
 	return (
 		<div id='home' className={styles['home']}>
 			<Snackbar message=' 🎉  Flat ₹2499 off for first 50 people!' />
-			<Navbar />
 			<div id='memberships' className='margin'>
 				<section className={styles['pricing']}>
 					<div className={styles['heading-wrapper']}>

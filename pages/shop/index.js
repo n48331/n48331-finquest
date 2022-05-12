@@ -17,9 +17,9 @@ const Home = ({ inventoryData = [] }) => {
                 <title>Finquest - Start learning how to invest &amp; trade in stock market easily.</title>
                 <link rel='icon' type='image/png' href='/favicon.png'></link>
             </Head>
+            <div className='section-spacer'></div>
 
             <Hero />
-            <div className='section-spacer'></div>
 
             <Features />
 

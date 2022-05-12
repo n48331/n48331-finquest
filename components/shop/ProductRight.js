@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 
 
-export default function ProductRight({ imageSrc, title, link, price }) {
+export default function ProductRight({ imageSrc, title, link, desc, price }) {
     return (
         <>
             <section className={styles['aboutR']}>
@@ -25,12 +25,11 @@ export default function ProductRight({ imageSrc, title, link, price }) {
                     {/* <p>
                         {desc} </p> */}
                     <div className="flex items-end gap-2">
-                        <span className="text-gray-800 text-xl md:text-4xl font-bold">
+                        <span className="text-gray-800 text-xl md:text-4xl sm:text-4xl xsm:text-4xl font-bold">
                             ₹{price}
                         </span>
-                        <span className="text-red-500 text-xl line-through mb-0.5">₹{price * 1.25}</span>
-                        <span className="text-red-500 text-xl mb-0.5"> (-{25}%)</span>
-
+                        <span className="text-red-500 text-lg line-through mb-0.5">₹{price * 1.25}</span>
+                        <span className="text-red-500 text-xl  mb-0.5">(-{25}%)</span>
                     </div><br />
 
 

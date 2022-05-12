@@ -10,7 +10,6 @@ export default function AboutUs() {
     return (
         <div id='home'>
             <div id='home' className={styles['nav-spacer']}></div>
-            <Navbar />
             <div id='home' className={styles['about-spacer']}></div>
             <About1 />
             <div id='home' className={styles['about-spacer']}></div>

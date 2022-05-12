@@ -66,102 +66,102 @@ const ItemView = (props) => {
         <title>Finquest - Start learning how to invest &amp; trade in stock market easily.</title>
         <link rel='icon' type='image/png' href='/favicon.png'></link>
       </Head>
-
-      <div className="
+      <div className="margin" >
+        <div className="
       sm:py-12
       md:flex-row
       py-4 w-full flex flex-1 flex-col my-0 mx-auto
     ">
-        <div className="w-full md:w-1/2 h-120 flex flex-1 bg-light hover:bg-light-200">
-          <div className="py-16 p10 flex flex-1 justify-center items-center">
-            <Image src={image} alt="Inventory item" className="max-h-full" />
+          <div className="w-full md:w-1/2 h-120 flex flex-1 bg-light hover:bg-light-200">
+            <div className="py-16 p10 flex flex-1 justify-center items-center">
+              <Image src={image} alt="Inventory item" className="max-h-full" />
+            </div>
           </div>
-        </div>
-        <div className="pt-2 px-0 md:px-10 pb-8 w-full md:w-1/2">
+          <div className="pt-2 px-0 md:px-10 pb-8 w-full md:w-1/2">
 
-          <h1 className="
+            <h1 className="
           sm:mt-0 mt-2 text-5xl font-light leading-large
          ">{name}</h1>
-          <div className="flex items-end gap-2">
-            <span className="text-gray-800 text-xl md:text-4xl font-bold">
-              ₹{price}
-            </span>
-            <span className="text-red-500 line-through mb-0.5">₹{price * 1.25}</span>
-          </div><br />
-          <p className="text-gray-600 leading-7">{description}</p><br />
+            <div className="flex items-end gap-2">
+              <span className="text-gray-800 text-xl md:text-4xl font-bold">
+                ₹{price}
+              </span>
+              <span className="text-red-500 line-through mb-0.5">₹{price * 1.25}</span>
+            </div><br />
+            <p className="text-gray-600 leading-7">{description}</p><br />
 
 
-          <div className={styles["product-configuration"]}>
-            <div className={styles["product-color"]}>
-              <div className="product-filter-item">
-                <span>Color : <strong>{color}</strong></span>
-                <div className={styles["color-choose"]}>
-                  {productsColors.map(type => (
-                    <div key={type.id}>
-                      <input
-                        data-name={type.label}
-                        name='color'
-                        key={type.id}
-                        onChange={colorChange}
-                        type="radio"
-                        id={type.color + '-' + type.id}
-                        value={type.id - 1}
-                        valueName={type.label}
-                        defaultChecked={type.check}
-                      />
-                      <label htmlFor={type.color + '-' + type.id}><span style={{ backgroundColor: type.color }}></span></label>
-                    </div>
-
-                  ))}
-                </div>
-              </div>
-
-
-            </div>
-            <div className={styles["cable-config"]}>
-              <span>Choose Size : <strong>{size}</strong></span>
-
-              <div className={styles["cable-choose"]}>
+            <div className={styles["product-configuration"]}>
+              <div className={styles["product-color"]}>
                 <div className="product-filter-item">
-                  <div className="checkbox-color-wrapper">
-                    <div className="flex space-x-2 select-wrapper">
-
-                      {productsSizes.map(type => (
-                        <button
+                  <span>Color : <strong>{color}</strong></span>
+                  <div className={styles["color-choose"]}>
+                    {productsColors.map(type => (
+                      <div key={type.id}>
+                        <input
+                          data-name={type.label}
+                          name='color'
                           key={type.id}
-                          className="bg-grey-500 hover:bg-grey-600 active:bg-grey-700 focus:outline-none focus:ring focus:ring-grey-300 ..."
-                          onClick={sizeSelect} value={type.label}>{type.label}</button>
-                      ))}
+                          onChange={colorChange}
+                          type="radio"
+                          id={type.color + '-' + type.id}
+                          value={type.id - 1}
+                          valueName={type.label}
+                          defaultChecked={type.check}
+                        />
+                        <label htmlFor={type.color + '-' + type.id}><span style={{ backgroundColor: type.color }}></span></label>
+                      </div>
 
-                    </div>
+                    ))}
                   </div>
                 </div>
 
+
               </div>
+              <div className={styles["cable-config"]}>
+                <span>Choose Size : <strong>{size}</strong></span>
+
+                <div className={styles["cable-choose"]}>
+                  <div className="product-filter-item">
+                    <div className="checkbox-color-wrapper">
+                      <div className="flex space-x-2 select-wrapper">
+
+                        {productsSizes.map(type => (
+                          <button
+                            key={type.id}
+                            className="bg-grey-500 hover:bg-grey-600 active:bg-grey-700 focus:outline-none focus:ring focus:ring-grey-300 ..."
+                            onClick={sizeSelect} value={type.label}>{type.label}</button>
+                        ))}
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
 
 
+              </div>
             </div>
-          </div>
-          <div className="my-6">
-            <QuantityPicker
-              increment={increment}
-              decrement={decrement}
-              numberOfitems={numberOfitems}
+            <div className="my-6">
+              <QuantityPicker
+                increment={increment}
+                decrement={decrement}
+                numberOfitems={numberOfitems}
+              />
+            </div>
+            <Button
+              full
+              title="Add to Cart"
+              onClick={() => addItemToCart(product)}
+            />
+            <br />
+            <br />
+            <Button
+              full
+              title="Buy now"
             />
           </div>
-          <Button
-            full
-            title="Add to Cart"
-            onClick={() => addItemToCart(product)}
-          />
-          <br />
-          <br />
-          <Button
-            full
-            title="Buy now"
-          />
-        </div>
-      </div>
+        </div></div>
     </>
   )
 }

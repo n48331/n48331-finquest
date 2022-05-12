@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import styles from './navbar.module.css'
 import Link from 'next/link'
 
-import { FaBuilding, FaStar, FaQuestion, FaAward } from 'react-icons/fa'
+import { FaBuilding, FaStar, FaQuestion, FaAward, FaShoppingCart } from 'react-icons/fa'
 import { BsPeopleFill } from 'react-icons/bs'
 
 const container = {
@@ -80,6 +80,11 @@ export default function Navbar() {
 						</Link>
 					</motion.li>
 					<motion.li variants={item}>
+						<Link href='/shop'>
+							<a>Goodies</a>
+						</Link>
+					</motion.li>
+					<motion.li variants={item}>
 						<Link href='/#faqs'>
 							<a>FAQs</a>
 						</Link>
@@ -129,6 +134,14 @@ function Menu({ onClose }) {
 						<a>
 							<FaAward className={styles['menu-item-icon']} style={{ color: '#0bab2e' }} />
 							<span>Memberships</span>
+						</a>
+					</Link>
+				</motion.li>
+				<motion.li variants={menuItem}>
+					<Link href='/shop'>
+						<a>
+							<FaShoppingCart className={styles['menu-item-icon']} style={{ color: '#bb00ff' }} />
+							<span>Goodies</span>
 						</a>
 					</Link>
 				</motion.li>

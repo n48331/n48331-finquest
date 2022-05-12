@@ -5,7 +5,6 @@ import Navbar from './Navbar'
 export default function Header() {
 	return (
 		<header className={styles['header']}>
-			<Navbar />
 			<Hero />
 		</header>
 	)

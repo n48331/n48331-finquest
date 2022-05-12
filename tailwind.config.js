@@ -7,15 +7,14 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		screens: {
-			'sm': '640px',
-			'ssm': '400px',
-			'sssm': '300px',
+			'sm': '576px',
+			'xsm': '360px',
 			// => @media (min-width: 640px) { ... }
 
-			'md': '768px',
+			'md': '960px',
 			// => @media (min-width: 768px) { ... }
 
-			'lg': '1024px',
+			'lg': '1440px',
 			// => @media (min-width: 1024px) { ... }
 
 			'xl': '1280px',
