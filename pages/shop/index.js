@@ -11,20 +11,20 @@ import Features from "../../components/shop/Features";
 
 const Home = ({ inventoryData = [] }) => {
     const inventory = inventoryData.slice(0, 4)
-
     return (
         <Layout>
             <Head>
                 <title>Finquest - Start learning how to invest &amp; trade in stock market easily.</title>
                 <link rel='icon' type='image/png' href='/favicon.png'></link>
             </Head>
+
             <Hero />
             <div className='section-spacer'></div>
 
             <Features />
 
             <CartLink />
-            <div id='about' className='margin'>
+            <div id='products' className='margin'>
                 <div id="journals">
                     <ProductRight
                         imageSrc={inventory[0].image}
