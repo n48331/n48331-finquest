@@ -1,5 +1,4 @@
 import styles from './styles.module.css'
-import Navbar from '../components/Navbar'
 import Snackbar from '../components/SnackBar'
 
 

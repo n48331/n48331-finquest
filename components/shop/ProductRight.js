@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 
 
-export default function ProductRight({ imageSrc, title, link, desc, price }) {
+export default function ProductRight({ imageSrc, title, link, price }) {
     return (
         <>
             <section className={styles['aboutR']}>
