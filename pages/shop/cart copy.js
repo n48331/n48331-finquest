@@ -18,7 +18,6 @@ const Cart = ({ context }) => {
     numberOfItemsInCart, cart, removeFromCart, total, setItemQuantity
   } = context
   const cartEmpty = numberOfItemsInCart === Number(0)
-
   function increment(item) {
     item.quantity = item.quantity + 1
     setItemQuantity(item)
@@ -34,6 +33,7 @@ const Cart = ({ context }) => {
 
   return (
     <>
+      <CartLink />
       <Head>
         <title>finquest ECommerce - Cart</title>
         <meta name="description" content={`finquest ECommerce - Shopping cart`} />

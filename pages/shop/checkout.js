@@ -142,7 +142,7 @@ const Checkout = ({ context }) => {
       >
         <div className="pt-10 pb-8">
           <h1 className="text-5xl font-light mb-6">Checkout</h1>
-          <Link href="/cart">
+          <Link href="/shop/cart">
             <a aria-label="Cart">
               <div className="cursor-pointer flex  items-center">
                 <FaLongArrowAltLeft className="mr-2 text-gray-600" />
@@ -167,11 +167,14 @@ const Checkout = ({ context }) => {
                         alt={item.name}
                       />
                       <p className="m-0 pl-10 text-gray-600">
-                        {item.name}
+                        {item.name} <br />
+                        {item.color} <br />
+                        {item.size} <br />
                       </p>
                       <div className="flex flex-1 justify-end">
                         <p className="m-0 pl-10 text-gray-900 font-semibold">
-                          {DENOMINATION + item.price}
+                          {DENOMINATION + item.price} x {item.quantity} <br />
+                          {DENOMINATION + item.price * item.quantity}
                         </p>
                       </div>
                     </div>

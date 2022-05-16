@@ -22,7 +22,6 @@ const Home = ({ inventoryData = [] }) => {
             <Hero />
 
             <Features />
-
             <CartLink />
             <div id='products' className='margin'>
                 <div id="journals">
