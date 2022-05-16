@@ -6,7 +6,6 @@ import { slugify } from '../../utils/helpers'
 import QuantityPicker from '../../components/shop/QuantityPicker'
 import Image from '../../components/shop/Image'
 import Head from 'next/head'
-import CartLink from '../../components/shop/CartLink'
 import './cart.module.css'
 
 const Cart = ({ context }) => {

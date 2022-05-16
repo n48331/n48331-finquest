@@ -9,8 +9,6 @@ import Link from 'next/link'
 import DENOMINATION from '../../utils/currencyProvider'
 import { slugify } from '../../utils/helpers'
 import QuantityPicker from '../../components/shop/QuantityPicker'
-import Image from '../../components/shop/Image'
-import Head from 'next/head'
 
 
 
@@ -18,30 +16,7 @@ const { primary } = colors
 
 function CartLink({ context }) {
 
-  const products = [
-    {
-      id: 1,
-      name: 'Throwback Hip Bag',
-      href: '#',
-      color: 'Salmon',
-      price: '$90.00',
-      quantity: 1,
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-      imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    },
-    {
-      id: 2,
-      name: 'Medium Stuff Satchel',
-      href: '#',
-      color: 'Blue',
-      price: '$32.00',
-      quantity: 1,
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-      imageAlt:
-        'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-    },
-    // More products...
-  ]
+
 
   const [renderClientSideComponent, setRenderClientSideComponent] = useState(false)
   const [open, setOpen] = useState(false)
