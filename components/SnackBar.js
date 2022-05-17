@@ -11,9 +11,8 @@ export default function Snackbar(props) {
 				<p className={styles['snack-text']}>{props.message} </p>
 				<button
 					className={styles['snack-close']}
-					onClick={(e) => {
+					onClick={() => {
 						setHidden(!hidden)
-						console.log(e);
 					}}
 				>
 					<IoMdClose />

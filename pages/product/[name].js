@@ -7,12 +7,12 @@ import { fetchInventory } from '../../utils/inventoryProvider'
 import { slugify } from '../../utils/helpers'
 import CartLink from '../../components/shop/CartLink'
 import { SiteContext, ContextProviderComponent } from '../../context/mainContext'
-import Layout from '../../components/shop/layout'
 import styles from "./product.module.css"
 import productsColors from '../../utils/products-colors';
 import productsSizes from '../../utils/products-sizes';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../../components/Navbar'
 
 const ItemView = (props) => {
   const [numberOfitems, updateNumberOfItems] = useState(1)
@@ -59,7 +59,7 @@ const ItemView = (props) => {
 
   return (
     <>
-      <Layout />
+      <Navbar />
       <CartLink />
       <ToastContainer />
       <Head>

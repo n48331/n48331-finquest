@@ -140,7 +140,7 @@ function Menu({ onClose }) {
 				<motion.li variants={menuItem}>
 					<Link href='/shop'>
 						<a>
-							<FaShoppingCart className={styles['menu-item-icon']} style={{ color: '#bb00ff' }} />
+							<FaShoppingCart className={styles['menu-item-icon']} style={{ color: '#dd66ee' }} />
 							<span>Goodies</span>
 						</a>
 					</Link>
