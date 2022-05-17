@@ -1,6 +1,6 @@
 
-import About1 from '../components/aboutUs/about1'
-import About2 from '../components/aboutUs/about2'
+import About1 from '../components/aboutUs/About1'
+import About2 from '../components/aboutUs/About2'
 import WhyUs1 from '../components/aboutUs/WhyUs1'
 import WhyUs2 from '../components/aboutUs/WhyUs2'
 import Navbar from '../components/Navbar'
