@@ -29,7 +29,7 @@ export default function ProductRight({ imageSrc, title, link, price }) {
                             ₹{price}
                         </span>
                         <span className="text-red-500 text-lg line-through mb-0.5">₹{price * 1.25}</span>
-                        <span className="text-red-500 text-xl  mb-0.5">(-{25}%)</span>
+                        <span className="text-red-500 text-xl  mb-0.5">({25}% Off)</span>
                     </div><br />
 
 

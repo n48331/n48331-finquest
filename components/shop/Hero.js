@@ -53,7 +53,7 @@ export default function Hero() {
 						}
 
 					> Buy Now </motion.button> </a> </div> <div className="order-1 col-span-1 text-gray-700 xl:pt-0 xl:col-span-3 md:order-2 md:pt-6"> <img alt="No alt"
-						src='/images/shop/shop-hero-image.svg'
+						src='/images/shop/hero (5).png'
 						className="block self-start  h-auto align-middle rounded-lg shadow-xs w-full mx-auto "
 
 					/> <div className={

@@ -33,7 +33,7 @@ export default function ProductLeft({ imageSrc, title, link, price }) {
                                 ₹{price}
                             </span>
                             <span className="text-red-500 text-xl line-through mb-0.5">₹{price * 1.25}</span>
-                            <span className="text-red-500 text-xl mb-0.5"> (-{25}%)</span>
+                            <span className="text-red-500 text-xl mb-0.5"> ({25}% Off)</span>
                         </div><br />
 
                         <h3>{title}</h3>
