@@ -13,6 +13,7 @@ import Reviews from '../components/Reviews'
 import Rocket from '../components/Rocket'
 import Snackbar from '../components/SnackBar'
 import Navbar from '../components/Navbar'
+import Store from '../components/Store'
 
 
 export default function Home() {
@@ -36,9 +37,10 @@ export default function Home() {
 			<div className='section-spacer'></div>
 			<Consultation />
 			<div className='section-spacer'></div>
+			<Store />
+			<div className='section-spacer'></div>
 			<Faqs />
 			<div className='section-spacer'></div>
-
 			<Letstalk />
 			<div className='section-spacer'></div>
 
