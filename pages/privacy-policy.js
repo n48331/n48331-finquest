@@ -46,7 +46,7 @@ export default function Privacy() {
 						standard internet log and technical data to measure and improve the effectiveness of the site,
 						to help diagnose problems with our server, to administer this web site, to see where web site
 						traffic is coming from and to identify our users. We may also collect other information via
-						theproductfolks.com, such as web site usage activity and preferences, also known as demographic
+						finqlearningcom, such as web site usage activity and preferences, also known as demographic
 						or profile data. In this connection we use ‘cookies to collect this information.
 
 						<br />
@@ -88,7 +88,7 @@ export default function Privacy() {
 						update or correct your details; restrict our use of your personal information; object to our use
 						of your personal information; receive your personal information in a usable electronic format
 						and transmit it to a third party; request that your personal details are deleted from our
-						ystems. You may exercise these rights by contacting us. We will treat all such requests in
+						systems. You may exercise these rights by contacting us. We will treat all such requests in
 						accordance with applicable local law. If you would like to opt out of receiving promotional
 						or marketing communications from us in the future, you may let us know by completing the
 						contact us on our site, stating the e-mail address you wish to be removed from our mailing
@@ -132,7 +132,7 @@ export default function Privacy() {
 						<br />
 						<br />
 						<span> International transfers</span> <br />
-						‍In order to provide services to you via theproductfolks.com, we may need to transfer your
+						‍In order to provide services to you via finqlearningcom, we may need to transfer your
 						personal information outside India to countries that may not provide a level of protection
 						of personal information that may be regarded as equivalent to that afforded under the Indian
 						data protection legislation. Whenever your personal information is transferred internationally,
@@ -148,8 +148,8 @@ export default function Privacy() {
 						<br />
 						<span>Security</span> <br />
 						Finquest has implemented generally accepted standards of technology and operation security
-						in order to protectpersonally identifiable information from loss, misuse, alteration or
-						destruction. Notwithstanding these precautions, we cannot guarantee thatunauthorized persons
+						in order to protect personally identifiable information from loss, misuse, alteration or
+						destruction. Notwithstanding these precautions, we cannot guarantee that unauthorized persons
 						will not obtain access to your personally identifiable information.
 
 						<br />
