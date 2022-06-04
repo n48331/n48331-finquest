@@ -1,4 +1,3 @@
-import { MdCalendarToday } from 'react-icons/md'
 import { motion } from 'framer-motion'
 import styles from './store.module.css'
 import { IoBagHandle } from 'react-icons/io5'
