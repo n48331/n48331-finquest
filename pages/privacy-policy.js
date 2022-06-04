@@ -23,7 +23,7 @@ export default function Privacy() {
 						<br />
 						<br />
 						<span>Minor</span> <br />
-						‍‍This website is not intentionally designed for or directed at persons 18 years of age or younger,
+						This website is not intentionally designed for or directed at persons 18 years of age or younger,
 						and Finquest learning will not intentionally collect or maintain information about anyone under
 						the age of 18.
 						<br />
@@ -35,19 +35,19 @@ export default function Privacy() {
 						information that we require in order to complete the registration may prevent or delay the
 						provision of any services to you. The categories of information that we collect from you are:·
 						Contact details, such as your name, location, IP address, job title, email address and
-						employer's name Information that you give us relating to the services we provide, such as
+						employer&apos;s name Information that you give us relating to the services we provide, such as
 						details of your requests or queries.
 						<br />
 						<br />
 						<span>Technical information</span> <br />
-						‍‍When you visit this web site, we may collect technical information such as your IP (Internet
+						When you visit this web site, we may collect technical information such as your IP (Internet
 						Protocol) address, details of the pages you visit on finqlearningcom, other pages you visit
 						on the world wide web and which browser you used to view finqlearning.com. This web site collects
 						standard internet log and technical data to measure and improve the effectiveness of the site,
 						to help diagnose problems with our server, to administer this web site, to see where web site
 						traffic is coming from and to identify our users. We may also collect other information via
 						finqlearningcom, such as web site usage activity and preferences, also known as demographic
-						or profile data. In this connection we use ‘cookies to collect this information.
+						or profile data. In this connection we use &apos;cookies to collect this information.
 
 						<br />
 						<br />
@@ -92,7 +92,9 @@ export default function Privacy() {
 						accordance with applicable local law. If you would like to opt out of receiving promotional
 						or marketing communications from us in the future, you may let us know by completing the
 						contact us on our site, stating the e-mail address you wish to be removed from our mailing
-						list. However, your option not to receive promotional and marketing e-mail shall not preclude us from corresponding with you, by e-mail or otherwise, regarding your existing relationship with us.
+						list. However, your option not to receive promotional and marketing e-mail shall not preclude
+						us from corresponding with you, by e-mail or otherwise, regarding your existing relationship
+						with us.
 						<br />
 						<br />
 						<span> Will you provide my information to a third party?</span> <br />
@@ -104,8 +106,8 @@ export default function Privacy() {
 						government investigation, or as otherwise required or permitted by law. We do not provide
 						information to third parties for their own marketing purposes, and we do not undertake
 						mailings for third parties. We may, as a result of a sale, merger, consolidation, change in
-						control, transfer of assets, reorganisation or liquidation of our company (a ‘Reorganisation
-						event’)transfer, sell or assign your personal information to third parties involved in the
+						control, transfer of assets, reorganisation or liquidation of our company (a &apos;Reorganisation
+						event&apos;)transfer, sell or assign your personal information to third parties involved in the
 						reorganisation event. We may share your information with other entities that are local to you
 						so that they can contact you with relevant materials in relation to a specific topic or
 						service offered.
@@ -124,7 +126,7 @@ export default function Privacy() {
 						<br />
 						<br />
 						<span>Is my information secure?</span> <br />
-						‍We have implemented generally accepted standards of technology and operational security to
+						We have implemented generally accepted standards of technology and operational security to
 						protect personal information from loss, misuse, alteration or destruction. We require all
 						employees and principals to keep personal information confidential and only authorised
 						personnel have access to this information.
@@ -132,7 +134,7 @@ export default function Privacy() {
 						<br />
 						<br />
 						<span> International transfers</span> <br />
-						‍In order to provide services to you via finqlearningcom, we may need to transfer your
+						In order to provide services to you via finqlearningcom, we may need to transfer your
 						personal information outside India to countries that may not provide a level of protection
 						of personal information that may be regarded as equivalent to that afforded under the Indian
 						data protection legislation. Whenever your personal information is transferred internationally,
