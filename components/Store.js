@@ -9,10 +9,11 @@ export default function Store() {
 				<div className={styles['content']}>
 					<h2>Checkout our store</h2>
 					<p>Our premium trader-wear store is here to give all traders something they love</p>
-					<a href='https://calendly.com/finquest' target='_blank' rel='noreferrer noopener'>
+					<a href='' onClick={(event) => event.preventDefault()} rel='noreferrer noopener'>
 						<div className={styles['coming-soon']}>
 
 							<motion.button
+
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
 								className={styles['store-button']}
