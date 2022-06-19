@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 24px;
 }
 
@@ -15,20 +14,22 @@
     line-height: 100%;
 }
 
-
 .store {
     display: flex;
     align-items: center;
     width: fit-content;
     margin: 0 auto;
     width: 100%;
+    flex-direction: row-reverse;
+
 }
 
 .image {
     width: 44%;
     max-width: 100%;
-    background-image: url('/images/store.webp');
+    background-image: url('/images/store.png');
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     flex-shrink: 2;
 }
@@ -40,21 +41,27 @@
 }
 
 .content {
+    max-width: 32rem;
     flex-shrink: 1;
 }
 
 .content p {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    line-height: 175%;
-    max-width: fit-content;
+
 }
 
 .content h2 {
-    line-height: normal;
+    line-height: 1.1;
 }
 
-
+.phone-no {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    margin-right: 1.5rem;
+    white-space: nowrap;
+}
 
 .store-button {
     height: 3.75rem;
@@ -91,7 +98,9 @@
         height: 2rem;
     }
 
-
+    .phone-no {
+        font-size: 1.15rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -102,7 +111,7 @@
     }
 
     .store {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .spacer {
@@ -116,10 +125,8 @@
 }
 
 @media (max-width: 639px) {
-
-
-    .store {
-        flex-direction: column-reverse;
-
+    .phone-no {
+        font-size: 1.1rem;
+        margin-right: 1rem;
     }
 }
